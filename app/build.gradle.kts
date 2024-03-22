@@ -72,17 +72,15 @@ dependencies {
 
     testImplementation ("io.mockk:mockk:1.12.2")
     testImplementation ("com.google.truth:truth:1.0.1")
-    androidTestImplementation ("com.google.truth:truth:1.0.1")
-
     testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1")
-
-    androidTestImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1")
-
-    androidTestImplementation ("com.google.dagger:hilt-android-testing:2.48")
     kaptAndroidTest ("com.google.dagger:hilt-android-compiler:2.48")
-
     testImplementation ("org.mockito:mockito-core:2.21.0")
     testImplementation ("androidx.arch.core:core-testing:2.1.0")
+
+    androidTestImplementation ("com.google.truth:truth:1.0.1")
+    androidTestImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1")
+    androidTestImplementation ("com.google.dagger:hilt-android-testing:2.48")
+
 
     // Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
@@ -125,6 +123,4 @@ dependencies {
     implementation ("com.google.accompanist:accompanist-systemuicontroller:0.31.4-beta")
 
     implementation ("androidx.compose.material:material-icons-extended:1.5.4")
-
-
 }
