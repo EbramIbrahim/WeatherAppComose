@@ -17,8 +17,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.weatherappcompose.forecast.presentation.CountryState
-import com.example.weatherappcompose.forecast.presentation.ForecastEvent
+import com.example.weatherappcompose.daily_weather.presentation.ForecastEvent
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

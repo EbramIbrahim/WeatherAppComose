@@ -53,7 +53,10 @@ fun ThemeSwitcherItems(
         .width(size * 2)
         .height(size)
         .clip(shape = parentShape)
-        .clickable { onClick() }
+        .clickable {
+            onClick()
+
+        }
         .background(MaterialTheme.colorScheme.secondaryContainer)
     ) {
         Box(

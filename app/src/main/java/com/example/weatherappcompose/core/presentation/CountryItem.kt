@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -20,8 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.weatherappcompose.forecast.domain.models.Country
-import com.example.weatherappcompose.forecast.presentation.CountryState
+import com.example.weatherappcompose.current_weather.domain.models.Country
 
 
 @Composable
@@ -39,7 +39,7 @@ fun CountryItem(
     }
     if (countryState.error.isNotEmpty() && !countryState.isLoading) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            Text(text = countryState.error, color = Color.Red, fontSize = 26.sp)
+            Text(text = "This City isn't found", color = Color.Red, fontSize = 16.sp)
         }
     }
     if (countryState.countryState.isNotEmpty()) {
@@ -68,7 +68,7 @@ fun CountryItemInfo(country: Country, onClick: (Country) -> Unit) {
         Column {
             Text(
                 text = country.countryName,
-                color = Color.White,
+                color = MaterialTheme.colorScheme.background,
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Bold
             )
@@ -76,14 +76,14 @@ fun CountryItemInfo(country: Country, onClick: (Country) -> Unit) {
 
             Text(
                 text = country.town,
-                color = Color.White,
+                color = MaterialTheme.colorScheme.background,
                 fontSize = 14.sp
             )
         }
 
         Text(
             text = country.timeZone,
-            color = Color.White,
+            color = MaterialTheme.colorScheme.background,
             fontSize = 16.sp
         )
 
