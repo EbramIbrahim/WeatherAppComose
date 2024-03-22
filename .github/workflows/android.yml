@@ -8,6 +8,20 @@ on:
 
 jobs:
   build:
+    jobs:
+    version: 2.
+    unit-tests:
+      working_directory: ~/project
+      docker:
+        - image: cimg/android:2023.02
+      steps:
+        - checkout
+        - run:
+            name: Run Unit Tests
+            command: |
+              ./gradlew clean test
+              - store_test_results:
+                  path: app/build/test-results
 
     runs-on: ubuntu-latest
 
@@ -24,3 +38,5 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+
+
